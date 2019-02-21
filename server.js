@@ -23,12 +23,12 @@ app.use((req, res, next)=>{
   });
   next();
 })
-
+/*
 app.use((req,res,next) =>{
   res.render('maintenance.hbs',{
     maintenanceMessage:'Sorry, maintenance page'
   })
-});
+});*/
 
 
 // to access static files
@@ -47,6 +47,13 @@ app.get('/', (req, res)=>{
   res.render('home.hbs', {
     pageTitle: 'Home Page',
     welcomeMessage: 'Hi Guys!'
+  })
+});
+
+app.get('/project', (req,res)=>{
+  res.render('project.hbs', {
+    pageTitle: 'Project Page',
+    projectMessage:'E-Liquid recipes'
   })
 });
 
